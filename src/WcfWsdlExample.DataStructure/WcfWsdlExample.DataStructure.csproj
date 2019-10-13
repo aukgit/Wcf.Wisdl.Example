@@ -88,6 +88,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\MappingConfigModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StaticType\DatabaseTableName.cs" />
     <Compile Include="StaticType\StaticDirectoryName.cs" />
@@ -101,7 +102,6 @@
   <ItemGroup>
     <Folder Include="Interface\" />
     <Folder Include="JsonModel\" />
-    <Folder Include="Model\" />
     <Folder Include="Parameter\" />
   </ItemGroup>
   <ItemGroup>

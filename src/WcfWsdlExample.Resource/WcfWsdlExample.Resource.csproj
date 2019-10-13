@@ -46,6 +46,13 @@
   <ItemGroup>
     <None Include="Automation\XmlToXsd-automation-repeat.bat" />
     <None Include="Automation\XmlToXsd-automation.bat" />
+    <None Include="Resources\ConfigurationFiles\CoreJsonConfiguration.json" />
+    <None Include="Resources\ConfigurationFiles\LogsConfiguration\WcfWsdlExample.Client.CommnadLine.log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\ConfigurationFiles\LogsConfiguration\WcfWsdlExample.Server.CommandLine.log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\DataTemplates\Readme.md" />
     <None Include="Readme.md" />
   </ItemGroup>
@@ -53,6 +60,10 @@
     <Content Include="Resources\DataCache\northwind.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\ConfigurationFiles\ListConfigurationFiles\" />
+    <Folder Include="Resources\ConfigurationFiles\MappingConfigurationFiles\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

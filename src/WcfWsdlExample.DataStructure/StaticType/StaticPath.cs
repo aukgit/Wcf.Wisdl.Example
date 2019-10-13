@@ -27,5 +27,35 @@ namespace WcfWsdlExample.DataStructure.StaticType
         public static readonly string NorthwindXmlPath = DirectoryHelper.CombinePaths(
             DataCachePath,
             StaticFileName.NorthwindXmlFile);
+
+        /// <summary>
+        ///     Example : "RunningDirectory\Resources\ConfigurationFiles"
+        /// </summary>
+        public static readonly string ResourceConfigurationDirectory = DirectoryHelper.CombinePaths(
+            ResourceDirectory,
+            "ConfigurationFiles");
+
+        /// <summary>
+        ///     Example : "RunningDirectory\Resources\ConfigurationFiles\LogsConfiguration"
+        /// </summary>
+        public static readonly string Log4NetConfigDirectory = DirectoryHelper.CombinePaths(
+            ResourceConfigurationDirectory,
+            "LogsConfiguration");
+
+        /// <summary>
+        ///     <see cref="Log4NetConfigDirectory"/>\"WcfWsdlExample.Server.CommandLine.log4net.config"
+        ///     Example : "RunningDirectory\Resources\ConfigurationFiles\LogsConfiguration\WcfWsdlExample.Server.CommandLine.log4net.config"
+        /// </summary>
+        public static readonly string WcfWsdlExampleServerCommandLineLog4netPath = DirectoryHelper.CombinePaths(
+            Log4NetConfigDirectory,
+            "WcfWsdlExample.Server.CommandLine.log4net.config");
+
+        /// <summary>
+        ///     <see cref="Log4NetConfigDirectory"/>\"WcfWsdlExample.Server.CommandLine.log4net.config"
+        ///     Example : "RunningDirectory\Resources\ConfigurationFiles\LogsConfiguration\WcfWsdlExample.Server.CommandLine.log4net.config"
+        /// </summary>
+        public static readonly string WcfWsdlExampleClientCommandLineLog4netPath = DirectoryHelper.CombinePaths(
+            Log4NetConfigDirectory,
+            "WcfWsdlExample.Client.CommnadLine.log4net.config");
     }
 }

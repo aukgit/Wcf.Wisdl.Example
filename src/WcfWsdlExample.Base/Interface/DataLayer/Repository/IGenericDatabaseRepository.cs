@@ -1,20 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 
-namespace WcfWsdlExample.DataLayer.Interface.Repository
+namespace WcfWsdlExample.Base.Interface.DataLayer.Repository
 {
-    public interface IGenericRepository<TEntity, TKey> where TEntity : ISqlDataModel
+    public interface IGenericDatabaseRepository<TEntity, TKey>: IGenericRepository<TEntity> where TEntity : ISqlDataModel
     {
-        IList<TEntity> GetAll();
-
         IQueryable<TEntity> Get();
 
         IQueryable<TEntity> Get(Func<TEntity, bool> predicate);
 
         TEntity GetById(TKey id);
 
-        void AddOrUpdate(TEntity entity);
+        void AddOrUpdate(TKey id, TEntity entity);
 
         void Add(TEntity entity);
 
@@ -22,6 +19,6 @@ namespace WcfWsdlExample.DataLayer.Interface.Repository
 
         void Delete(TEntity entity);
 
-        void SaveChanges();
+        void SaveChanges(TEntity entity);
     }
 }

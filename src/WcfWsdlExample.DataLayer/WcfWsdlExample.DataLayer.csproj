@@ -92,9 +92,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataModel\NorthwindCustomerModel.cs" />
+    <Compile Include="Interface\Repository\INorthwindCustomRepository.cs" />
+    <Compile Include="Implementation\Repository\NorthwindCustomRepository.cs" />
     <Compile Include="Interface\INorthwindDataSetReader.cs" />
-    <Compile Include="Implementation\NorthwindDataSetReader.cs" />
-    <Compile Include="Interface\ISqlDataModel.cs" />
+    <Compile Include="Implementation\NorthwindDatasetReader.cs" />
     <Compile Include="NorthwindDataSet\northwind.cs">
       <DependentUpon>northwind.xsd</DependentUpon>
     </Compile>
@@ -104,7 +106,6 @@
       <DependentUpon>northwind.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Interface\Repository\IGenericRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
